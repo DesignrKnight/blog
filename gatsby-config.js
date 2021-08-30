@@ -5,10 +5,20 @@ const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-minimal-blog/gatsby-config.js
+    // Used for the title template on pages other than the index site
+    siteTitle: `Abel Mathew`,
+    // Default title of the page
     siteTitleAlt: `Abel's Garage: A Blog`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Abel's Garage`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://garage.designrknight.com`,
+    // Used for SEO
+    siteDescription: `A blog.`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Twitter Handle
+    author: `@designrknight`,
   },
   plugins: [
     {
