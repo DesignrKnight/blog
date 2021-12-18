@@ -30,7 +30,18 @@ const Comments = ({ children, withSeparator = true }) => {
 	return (
 		<>
 			{withSeparator && <Divider />}
-			{children && <Box sx={{ fontSize: [1, 1, 2] }}>{children}</Box>}
+			<Box sx={{ fontSize: [1, 1, 2] }}>
+				<p>
+					Let's chat. Express your perspective via comments{children ? ` or Twitter` : ``}. Looking forward to your
+					views. 🚀
+				</p>
+			</Box>
+
+			{children && (
+				<blockquote class="twitter-tweet tw-align-center" data-theme={colorMode}>
+					{children}
+				</blockquote>
+			)}
 			<div id={id} />
 		</>
 	);

@@ -44,6 +44,10 @@ module.exports = {
 						name: `GitHub`,
 						url: `https://github.com/DesignrKnight`,
 					},
+					{
+						name: `LinkedIn`,
+						url: `https://www.linkedin.com/in/designrknight`,
+					},
 				],
 			},
 		},
@@ -98,6 +102,7 @@ module.exports = {
 		`gatsby-plugin-offline`,
 		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-plugin-netlify`,
+		`gatsby-plugin-twitter`,
 		{
 			resolve: `gatsby-plugin-feed`,
 			options: {
