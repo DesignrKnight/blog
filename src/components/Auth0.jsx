@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-const LoginButton = () => {
+const LoginButton = ({ redirectLocation }) => {
 	const { loginWithRedirect, logout, user, isAuthenticated, isLoading } = useAuth0();
 
 	if (isLoading) {
@@ -15,7 +15,7 @@ const LoginButton = () => {
 				<h2>{user.name}</h2>
 				<p>{user.email}</p>
 			</div>
-			<button onClick={() => logout({ returnTo: window.location.href })}>Log Out</button>
+			<button onClick={() => logout({ returnTo: redirectLocation })}>Log Out</button>
 		</>
 	) : (
 		<button onClick={() => loginWithRedirect()}>Log In</button>
@@ -23,13 +23,14 @@ const LoginButton = () => {
 };
 
 const Auth0 = () => {
+	const redirectLocation = typeof window !== 'undefined' ? window.location.href : `/`;
 	return (
 		<Auth0Provider
 			domain="aviyel-demo-abel.us.auth0.com"
 			clientId="7OOwPn8ddpP4HOhTPfsxgrDOof7vSQec"
-			redirectUri={window.location.href}
+			redirectUri={redirectLocation}
 		>
-			<LoginButton />
+			<LoginButton redirectLocation={redirectLocation} />
 		</Auth0Provider>
 	);
 };
