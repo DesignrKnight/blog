@@ -10,11 +10,19 @@ const Comments = ({ children, withSeparator = true }) => {
 		const script = document.createElement('script');
 		const parent = document.getElementById(id);
 
-		script.setAttribute('src', 'https://utteranc.es/client.js');
-		script.setAttribute('repo', 'DesignrKnight/blog');
-		script.setAttribute('issue-term', 'pathname');
-		script.setAttribute('theme', colorMode === 'dark' ? 'github-dark' : 'github-light');
-		script.setAttribute('label', 'blog-comment');
+		script.setAttribute('src', 'https://giscus.app/client.js');
+		script.setAttribute('data-repo', 'DesignrKnight/blog');
+		script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnk0MDEwMTk2ODU');
+		script.setAttribute('data-category', 'General');
+		script.setAttribute('data-category-id', 'DIC_kwDOF-cTJc4CRwEK');
+		script.setAttribute('data-mapping', 'pathname');
+		script.setAttribute('data-strict', '1');
+		script.setAttribute('data-reactions-enabled', '1');
+		script.setAttribute('data-emit-metadata', '1');
+		script.setAttribute('data-input-position', 'top');
+		script.setAttribute('data-theme', colorMode);
+		script.setAttribute('data-lang', 'en');
+		script.setAttribute('data-loading', 'lazy');
 
 		script.setAttribute('crossorigin', 'anonymous');
 		script.setAttribute('async', 'true');
