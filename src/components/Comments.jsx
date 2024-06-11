@@ -42,6 +42,11 @@ const Comments = ({ children }) => {
 				<p>Let's chat. Reach out to me or express your thoughts via comments. 🚀</p>
 			</Box>
 			<div id={id} />
+			<script
+				defer
+				src="https://static.cloudflareinsights.com/beacon.min.js"
+				data-cf-beacon='{"token": "0d8395f98159474fba0a073d373c4af0"}'
+			/>
 		</>
 	);
 };
