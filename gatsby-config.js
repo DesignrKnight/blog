@@ -100,8 +100,6 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-offline`,
-		`gatsby-plugin-gatsby-cloud`,
-		`gatsby-plugin-netlify`,
 		`gatsby-plugin-twitter`,
 		{
 			resolve: `gatsby-plugin-feed`,

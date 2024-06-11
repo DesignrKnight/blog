@@ -1,12 +1,12 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { useColorMode, Box, Divider } from 'theme-ui';
 
 const id = 'inject-comments';
 
-const Comments = ({ children, withSeparator = true }) => {
+const Comments = ({ children }) => {
 	const [colorMode] = useColorMode();
 
-	React.useEffect(() => {
+	useEffect(() => {
 		const script = document.createElement('script');
 		const parent = document.getElementById(id);
 
@@ -37,20 +37,16 @@ const Comments = ({ children, withSeparator = true }) => {
 
 	return (
 		<>
-			{withSeparator && <Divider />}
+			<Divider />
 			<Box sx={{ fontSize: [1, 1, 2] }}>
-				<p>
-					Let's chat. Express your perspective via comments{children ? ` or Twitter` : ``}. Looking forward to your
-					views. 🚀
-				</p>
+				<p>Let's chat. Reach out to me or express your thoughts via comments. 🚀</p>
 			</Box>
-
-			{children && (
-				<blockquote class="twitter-tweet tw-align-center" data-theme={colorMode}>
-					{children}
-				</blockquote>
-			)}
 			<div id={id} />
+			<script
+				defer
+				src="https://static.cloudflareinsights.com/beacon.min.js"
+				data-cf-beacon='{"token": "0d8395f98159474fba0a073d373c4af0"}'
+			/>
 		</>
 	);
 };
