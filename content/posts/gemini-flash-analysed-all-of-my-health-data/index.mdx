@@ -11,6 +11,8 @@ slug: '/gemini-flash-analysed-all-of-my-health-data'
 import Comments from 'components/Comments';
 import Tweet from 'components/Tweet';
 
+![Gemini Flash Summary Banner](./gemini-flash-summary-cover.webp)
+
 Back at University in 2019, I still remember taking the phone and going for a walk,
 just to get the circle to complete on [Google Fit](https://www.google.com/fit/).
 These numbers albeit not necessarily precise to the point,
@@ -64,6 +66,17 @@ until you try pushing the boundary. It can output code, markdown, paragraphs, bu
 I needed to plot a graph of the analysed data. With the right set of prompts,
 it gave data in a table format, which I could copy and paste into Excel to get the chart drawn.
 It could even provide a code snippet in your language of choice to generate your request.
+
+I ensured to use some of the following phrases across the prompts and
+system instructions to get the desired results.
+
+- Please provide the answer as a CSV that I can copy-paste into Excel.
+- Provide a script to graph the data using JavaScript.
+- In a case, where you want the output to be of a specific format,
+  Gemini may provide you with a script to convert data to your required format.
+  This may be frustrating as you want the outcome, but Gemini instead is giving instructions.
+  In such case, you can try adding - _"Please do not provide output as code, provide data as a table"_
+  or similar as per your need to system instruction.
 
 ## Magic Inside
 
@@ -147,7 +160,7 @@ It's always best to test for your specific use case to get a feel for the outcom
 
 ## Thank You
 
-✨*[Google Cloud Champion Innovators](https://cloud.google.com/innovators/champions) Program supported this work*✨
-Images are taken from blogs by Google.
+- ✨*[Google Cloud Champion Innovators](https://cloud.google.com/innovators/champions) Program supported this work*✨
+- Images are taken from blogs by Google.
 
 <Comments />
