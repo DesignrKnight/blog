@@ -63,8 +63,8 @@ or [Vertex AI](https://console.cloud.google.com/vertex-ai/publishers/google/mode
 is multimodal in its input, its output is text. The text format seems to be a constraint
 until you try pushing the boundary. It can output code, markdown, paragraphs, bullet points, tables, JSON, etc.
 
-I needed to plot a graph of the analysed data. With the right set of prompts,
-it gave data in a table format, which I could copy and paste into Excel to get the chart drawn.
+I needed to plot a graph of the analysed data. The right set of prompts
+gave data in a table format, which I could copy and paste into Excel to get the chart drawn.
 It could even provide a code snippet in your language of choice to generate your request.
 
 I ensured to use some of the following phrases across the prompts and
@@ -76,7 +76,7 @@ system instructions to get the desired results.
   Gemini may provide you with a script to convert data to your required format.
   This may be frustrating as you want the outcome, but Gemini instead is giving instructions.
   In such case, you can try adding - _"Please do not provide output as code, provide data as a table"_
-  or similar as per your need to system instruction.
+  or similar as per your need to the system instruction section.
 
 ## Magic Inside
 
@@ -138,7 +138,7 @@ It's always best to test for your specific use case to get a feel for the outcom
   before a full-fledged experiment.
 
 - If your input dataset comprises multiple files, it is best to merge it.
-  This leads to finer outcomes from the model, as well as better performance the object storage like GCP Cloud Storage.
+  This leads to finer outcomes from the model, as well as better performance for the object storage like GCP Cloud Storage.
   If it is a text-based file, you can directly `cat` (concatenate) like below.
 
   ```sh
